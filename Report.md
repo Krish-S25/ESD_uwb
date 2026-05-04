@@ -8,15 +8,11 @@ The power circuit is designed to handle charging and regulation for portable ope
 
 DATA LINE MAPPING 
 <img width="801" height="461" alt="image" src="https://github.com/user-attachments/assets/d3ca8bdc-624f-4add-b68e-ce201a4117c3" />
-
+The communication between the microcontroller and the radio module is handled through a high speed serial peripheral interface. Following the recommended application guidance the system uses specific pin assignments for reliable data transfer.
 
 NOISE REDUCTION
 
 Maintaining signal integrity is a priority because the radio pulses operate at a very high frequency of six point five gigahertz. The design implements a specific capacitor strategy to filter out electrical interference from the digital components. A large one hundred microfarad capacitor provides a reservoir of energy for sudden power demands while smaller four point seven and zero point two two microfarad capacitors target medium and high frequency noise respectively. These components work together as a low pass filter to ensure that the sensitive timing measurements of the radio module are not disrupted by power fluctuations.
-
-HARDWARE INTERFACE
-
-The communication between the microcontroller and the radio module is handled through a high speed serial peripheral interface. Following the recommended application guidance the system uses specific pin assignments for reliable data transfer. The clock line is connected to GPIO 18 and the data input line is connected to GPIO 19. The data output line is assigned to GPIO 23 and the chip select line uses GPIO 5. Additionally separate pins are used for hardware reset and interrupt signals which allow the microcontroller to respond instantly to incoming radio data.
 
 DESIGN CONSIDERATIONS
 
