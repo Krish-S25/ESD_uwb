@@ -8,7 +8,7 @@ Files in repository
 
 Procedure to replicate 
 1. Form circuits as shown in schematics with exact pin mappings
-2. Map the room that needs to be covered with accurate anchor coordinates(Higher and spread out is better)
+2. Map the room that needs to be covered with accurate anchor coordinates (Higher and spread out is better)
 3. Upload codes to all units (3 anchors and 1 tag)
 4. Place all anchors in designated locations
 5. Provide power and start all systems
