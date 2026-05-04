@@ -1,17 +1,17 @@
 /*
  * BU03/DW3000 Final Hardware Self-Check
- * Verified against Figure 9 Application Guidance Circuit.
  */
 #include <SPI.h>
 #include "dw3000.h"
 
 // ===================== VERIFIED PIN CONFIG =====================
-#define PIN_SCK  18   // ESP32 GPIO18 -> BU03 Pin 20 (SPICLK)
+#define PIN_SCK  18   // ESP32 GPIO18 -> BU03 Pin 20 (SPICLK)   
 #define PIN_MISO 19   // ESP32 GPIO19 -> BU03 Pin 19 (SPIMISO)
 #define PIN_MOSI 23   // ESP32 GPIO23 -> BU03 Pin 18 (SPIMOSI)
 #define PIN_SS   5    // ESP32 GPIO5  -> BU03 Pin 17 (SPICSN)
 #define PIN_RST  27   // ESP32 GPIO27 -> BU03 Pin 3  (RSTN)
 #define PIN_IRQ  34   // ESP32 GPIO34 -> BU03 Pin 22 (IRQ/GPIO8)
+//Make Wakeup mapping to gpio and control it for power conservation.
 // ===============================================================
 
 static dwt_config_t config = {
